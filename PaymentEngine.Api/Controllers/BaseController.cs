@@ -26,6 +26,8 @@ namespace PaymentEngine.Api.Controllers
 
                 case ApiResponseCodes.ERROR:
                     return BadRequest(result);
+                case ApiResponseCodes.FAIL:
+                    return BadRequest(result);
                 default:
                     return Ok(result);
             }

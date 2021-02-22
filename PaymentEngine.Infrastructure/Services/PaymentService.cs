@@ -1,15 +1,9 @@
 ﻿using PaymentEngine.Domain.Models;
 using PaymentEngine.Infrastructure.Dtos;
-using PaymentEngine.Infrastructure.Factory;
-using PaymentEngine.Infrastructure.Providers.Interfaces;
 using PaymentEngine.Infrastructure.Providers.Models;
 using PaymentEngine.Infrastructure.Repositories.Interfaces;
 using PaymentEngine.Infrastructure.Services.Interfaces;
 using PaymentEngine.Infrastructure.Strategy.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PaymentEngine.Infrastructure.Services
