@@ -7,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PaymentEngine.Api.Filters;
-using PaymentEngine.Infrastructure.Factory;
 using PaymentEngine.Infrastructure.Providers;
 using PaymentEngine.Infrastructure.Providers.Interfaces;
 using System;

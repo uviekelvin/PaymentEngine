@@ -5,7 +5,6 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using PaymentEngine.Infrastructure.DataAccess;
 using PaymentEngine.Infrastructure.Dtos;
-using PaymentEngine.Infrastructure.Factory;
 using PaymentEngine.Infrastructure.Providers;
 using PaymentEngine.Infrastructure.Providers.Interfaces;
 using PaymentEngine.Infrastructure.Repositories;
@@ -14,11 +13,6 @@ using PaymentEngine.Infrastructure.Services;
 using PaymentEngine.Infrastructure.Services.Interfaces;
 using PaymentEngine.Infrastructure.Strategy;
 using PaymentEngine.Infrastructure.Strategy.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace PaymentEngine.Api
 {
     public static class StartUpHelperClass
