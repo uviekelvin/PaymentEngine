@@ -7,11 +7,11 @@ using System.Text;
 
 namespace PaymentEngine.Infrastructure.Providers
 {
-    public class ExpensivePaymentGateway : IPaymentGateway
+    public class ExpensivePaymentGateway : IExpensivePaymentGateway
     {
         public bool IsValid(decimal amount)
         {
-            return amount > 20 && amount <= 500;
+            return amount >= 21 && amount <= 500;
         }
 
         public ApiResponseDtos<bool> MakePayment(PaymentModel model)

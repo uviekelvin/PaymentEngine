@@ -5,11 +5,11 @@ using System;
 
 namespace PaymentEngine.Infrastructure.Providers
 {
-    public class CheapPaymentGateway : IPaymentGateway
+    public class CheapPaymentGateway : ICheapPaymentGateway
     {
         public bool IsValid(decimal amount)
         {
-            return amount <= 20;
+            return amount < 20;
         }
         public ApiResponseDtos<bool> MakePayment(PaymentModel model)
         {

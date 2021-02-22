@@ -1,4 +1,5 @@
 ﻿using PaymentEngine.Infrastructure.Dtos;
+using PaymentEngine.Infrastructure.Providers;
 using PaymentEngine.Infrastructure.Providers.Interfaces;
 using PaymentEngine.Infrastructure.Providers.Models;
 using PaymentEngine.Infrastructure.Strategy.Interfaces;
@@ -20,6 +21,10 @@ namespace PaymentEngine.Infrastructure.Strategy
         public ApiResponseDtos<bool> ProcessPayment(PaymentModel paymentModel)
         {
             var provider = this._paymentGateways.FirstOrDefault(x => x.IsValid(paymentModel.Amount));
+            if (provider == null)
+            {
+                provider = this._paymentGateways.FirstOrDefault(x => x.GetType().Name == typeof(CheapPaymentGateway).Name);
+            }
             return provider.MakePayment(paymentModel);
         }
     }
